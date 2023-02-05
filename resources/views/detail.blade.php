@@ -16,9 +16,9 @@
         @endif
         <div class="col-sm-4">
                 @if ($barang->image)
-                    <img src="{{ asset('storage/' . $barang->image) }}" alt="{{ $barang->category->name }}" width="320px" class="img-fluid mt-3">
+                    <img src="{{ asset('storage/' . $barang->image) }}" alt="" width="320px" class="img-fluid mt-3">
                 @else
-                    <img src="..." alt="..." width="320px" class="mt-4 mb-4">
+                    <img src="" alt="..." width="320px" class="mt-4 mb-4">
                 @endif
                 <div class="card-text text-center mb-2 mt-5">Scan halaman ini</div>
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{url()->full()}}" alt="" class="d-block mx-auto">
@@ -38,7 +38,15 @@
                         </li>
                         <li class="list-group-item">
                             <p class="card-text">
-                                Support :  {{$barang->socket}} - {{$barang->ram_support}}
+                                Ukuran :  {{$barang->ukuran}}
+                            </p></li>
+                            <li class="list-group-item">
+                            <p class="card-text">
+                                Bahan :  {{$barang->bahan}}
+                            </p></li>
+                            <li class="list-group-item">
+                            <p class="card-text">
+                                Warna :  {{$barang->warna}}
                             </p></li>
                         <li class="list-group-item"><p class="card-text">Tersedia :  {{$barang->stok}} unit</p></li>
                     </ul>

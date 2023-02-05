@@ -37,35 +37,37 @@ class DatabaseSeeder extends Seeder
 
         // buat category
         Category::create([
-            'nama' => 'Processor',
-            'slug' => 'processor'
+            'nama' => 'Baju',
+            'slug' => 'Baju'
         ]);
 
         Category::create([
-            'nama' => 'Motherboard',
-            'slug' => 'motherboard'
+            'nama' => 'Jaket',
+            'slug' => 'Jaket'
         ]);
 
         //buat barang
         Barang::create([
-            'nama_barang' => 'Intel i5-4590',
-            'slug' => 'intel-i5-4590',
-            'desc' => 'Boost clock 3.33 Ghz',
+            'nama_barang' => 'Baju flanel',
+            'slug' => 'Baju ',
+            'desc' => 'baju dengan bahan flanel',
+            'ukuran' => 'XL',
+            'bahan' => 'katun',
+            'warna' => 'putih',
             'harga' => '850000',
-            'socket' => 'LGA1151',
-            'ram_support' => 'DDR3-1600',
             'category_id' => 1,
             'stok' => 50,
             'user_id' => 1
         ]);
 
         Barang::create([
-            'nama_barang' => 'Gigabyte H81',
-            'slug' => 'gigabyte-h81',
-            'desc' => 'DDR3 Support',
-            'harga' => '450000',
-            'socket' => 'LGA1151',
-            'ram_support' => 'DDR3-1600',
+            'nama_barang' => 'Jaket kulit',
+            'slug' => 'Jaket Kulit',
+            'desc' => 'Jaket kulit ',
+            'ukuran' => 'M',
+            'bahan' => 'kulit',
+            'warna' => 'hitam',
+            'harga' => '850000',
             'category_id' => 2,
             'stok' => 50,
             'user_id' => 1

@@ -10,7 +10,7 @@
         @method('put')
         @csrf
             <div class="mb-3">
-                <label for="nama_barang" class="form-label">Nama Barang</label>
+                <label for="nama_barang" class="form-label">Nama Barang </label>
                 <input type="text" class="form-control @error('nama_barang') is-invalid @enderror" id="nama_barang" name="nama_barang" required autofocus value="{{old('nama_barang', $barang->nama_barang)}}">
                 @error('nama_barang')
                 <div class="invalid-feedback">
@@ -37,12 +37,16 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="socket" class="form-label">Socket</label>
-                <input type="text" class="form-control" id="socket" name="socket" required value="{{old('socket', $barang->socket)}}">
+                <label for="ukuran" class="form-label">ukuran</label>
+                <input type="text" class="form-control" id="ukuran" name="ukuran" required value="{{old('ukuran', $barang->ukuran)}}">
             </div>
             <div class="mb-3">
-                <label for="ram_support" class="form-label">RAM Support</label>
-                <input type="text" class="form-control" id="" name="ram_support" required value="{{old('ram_support', $barang->ram_support)}}">
+                <label for="bahan" class="form-label">bahan</label>
+                <input type="text" class="form-control" id="bahan" name="bahan" required value="{{old('bahan', $barang->bahan)}}">
+            </div>
+            <div class="mb-3">
+                <label for="warna" class="form-label">warna</label>
+                <input type="text" class="form-control" id="warna" name="warna" required value="{{old('warna', $barang->warna)}}">
             </div>
             <div class="mb-3">
                 <label for="stok" class="form-label">Stock Barang</label>

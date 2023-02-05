@@ -18,12 +18,13 @@ class CreateBarangsTable extends Migration
             $table->foreignId('category_id');
             $table->foreignId('user_id');
             $table->string('nama_barang');
-            $table->string('slug')->unique();
+            $table->string('slug')->nullable();
             $table->string('image')->nullable();
             $table->string('desc');
+            $table->string('ukuran')->nullable();
+            $table->string('bahan')->nullable();
+            $table->string('warna')->nullable();
             $table->string('harga');
-            $table->string('socket')->nullable();
-            $table->string('ram_support')->nullable();
             $table->integer('stok')->nullable();
             $table->timestamp('ditambahkan')->nullable();
             $table->timestamps();

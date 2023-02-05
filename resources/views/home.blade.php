@@ -4,39 +4,28 @@
 @section('container')
         <div class="container">
         {{-- Slideshow --}}
-        <div id="carouselExampleCaptions" class="carousel slide carousel-fade mb-2" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="img/slide/slide1.png" class="d-block w-100" style="object-fit: cover; object-position: center; height:60vh" alt="">
-                <p class="carousel-caption fw-6 m-1">Photo by <a href="https://unsplash.com/@rapol?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white text-decoration-none">Rafael Pol</a> on <a href="https://unsplash.com/s/photos/computer-hardware?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="text-white text-decoration-none">Unsplash</a>
-  </p>
-
-            </div>
-            <!-- <div class="carousel-item">
-              <img src="img/slide/slide2.jpg" class="d-block w-100" style="object-fit: cover; object-position: center; height:60vh" alt="">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-              </div>
+              <img src="img/slide/flanel.png" class="d-block w-100 h-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="img/slide/slide3.jpg" class="d-block w-100" style="object-fit: cover; object-position: center; height:60vh" alt="">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div> -->
+              <img src="img/slide/kulit.png" class="d-block w-100 h-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/slide/slide1.png" class="d-block w-100 h-100" alt="...">
+            </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -53,7 +42,7 @@
                 @if ($barangs->image)
                     <img src="{{ asset('storage/' . $barangs->image) }}" alt="{{ $barangs->category->name }}" class="img-fluid mt-3">
                 @else
-                  <img src="..." class="card-img-top" alt="{{$barangs->image}}">
+                  <img src="img/slide/flane;.png" class="card-img-top" alt="{{$barangs->image}}">
                 @endif
           
           <div class="card-body">
@@ -83,11 +72,7 @@
               <div class="footer-col">
                 <h4>Team</h4>
                 <ul>
-                  <li><a href="...">Muhamad Fawwazt S</a></li>
-                  <li><a href="...">Rizky Angga Saputra</a></li>
-                  <li><a href="...">Rifqi Muliawan</a></li>
-                  <li><a href="...">Devis Suparlan</a></li>
-                  <li><a href="...">Nelli Marliana</a></li>
+                  <li><a href="...">Aku</a></li>
                 </ul>
               </div>
               <div class="footer-col">
@@ -108,7 +93,7 @@
              </div>
              <div class="container px-4 px-lg-5 mt-1">
                <hr class="text-white">
-               <p class="text-white text-center">Copyright &copy; TechniPart Team 2021</p>
+               <p class="text-white text-center">Copyright &copy; Made With Heart</p>
              </div>
       </div>
     </div>

@@ -1,16 +1,31 @@
 <div class="sticky-top">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Halaman Utama</a>
-        </li>
-      </ul>
+        <a href="/" class="text-decoration-none"><p class="text-white fs-5 fw-bold mx-2 mt-1">Market <span class="text-warning fs-6">place</span></p></a>
 
+      </ul>
+      <li class="nav-item dropdown mb-4">
+        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-grid"></i> Kategori</a>
+        <ul class="dropdown-menu">
+        @foreach($category as $categories)
+          <li><a class="dropdown-item" href="/?category={{$categories->slug}}">{{$categories->nama}}</a></li>
+        @endforeach
+        </ul>
+        <li class="nav-item">
+        <form class="d-flex mb-4" action="/">
+            @if(request('category'))
+                <input type="hidden" name="category" value="{{request('category')}}">
+            @endif
+            <input class="form-control me-2" type="text" placeholder="Cari" name="search" value="{{request('search')}}">
+            <button class="btn btn-outline-warning" type="submit">Search</button>
+        </form>
+        </li>
+      </li>
         <!-- Login -->
         <ul class="navbar-nav ms-auto">
         @auth
@@ -45,30 +60,5 @@
   </div>
 </nav>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a href="/" class="text-decoration-none"><p class="text-white fs-5 fw-bold mx-2 mt-3">TECHNI <span class="text-primary fs-6">PART</span></p></a>
-      <div class="navbar-collapse justify-content-md-center">
-        <ul class="navbar-nav p-1">
-          <li class="nav-item dropdown mt-2">
-            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-grid"></i> Kategori</a>
-            <ul class="dropdown-menu">
-            @foreach($category as $categories)
-              <li><a class="dropdown-item" href="/?category={{$categories->slug}}">{{$categories->nama}}</a></li>
-            @endforeach
-            </ul>
-            <li class="nav-item">
-            <form class="d-flex mt-2 mx-3" action="/">
-                @if(request('category'))
-                    <input type="hidden" name="category" value="{{request('category')}}">
-                @endif
-                <input class="form-control me-2" type="text" placeholder="Cari" name="search" value="{{request('search')}}">
-                <button class="btn btn-outline-primary" type="submit">Search</button>
-            </form>
-            </li>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
   </div>
